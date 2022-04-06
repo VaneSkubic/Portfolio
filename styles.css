@@ -12,6 +12,12 @@ body {
     background-color: #36382E;
     font-family: 'Consolas', Courier, monospace;
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bandwith-img {
+    width: 100%;
 }
 
 h1 {
