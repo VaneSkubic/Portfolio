@@ -24,8 +24,23 @@
 
 <body>
     <main class="bandwith">
-        <img class="bandwith-img" src="bandwith.jpg" alt="BandWith UI">
+        <img id="bandwith-img" src="../Assets/bandwith_desktop.jpg" alt="BandWith UI">
     </main>
 </body>
+
+<script>
+    let img = document.getElementById('bandwith-img')
+
+    function changeSrc() {
+        if (window.innerWidth > 1024) {
+            img.src = '../Assets/bandwith_desktop.jpg'
+        } else if (window.innerWidth > 767) {
+            img.src = '../Assets/bandwith_tablet.jpg'
+        } else {
+            img.src = '../Assets/bandwith_mobile.jpg'
+        }
+    }
+    window.addEventListener('resize', changeSrc)
+</script>
 
 </html>
