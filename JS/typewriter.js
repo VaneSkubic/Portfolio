@@ -3,12 +3,22 @@ var paragraph = document.getElementsByClassName('about-paragraph')[0];
 
 var typewriter = new Typewriter(paragraph, {
     loop: false,
-    delay: 0,
+    delay: 30,
 });
 
 window.setTimeout(function() {
     typewriter
-        .typeString("I am <strong>Vane Skubic</strong>, a web developer and part-time musician based in Logatec, Slovenia. My mission is to equip <strong>your brand with a strong visual identity</strong> on the web. My main interests are web design/development, mobile development, and 3D. Currently, I am studying computer engineering at The Faculty of Computer and Information Science in Ljubljana. I've also spent a good part of my teens playing guitar and studying music.<br><strong>Let's work together!</strong>")
+        .typeString("I am <strong>Vane Skubic</strong>, a web developer and part-time musician based in Logatec, Slovenia.")
+        .pauseFor(1000)
+        .typeString(" My mission is to equip <strong>your brand with a strong visual identity</strong> on the web.")
+        .pauseFor(1000)
+        .typeString(" My main interests are web design/development, mobile development, and 3D.")
+        .pauseFor(1000)
+        .typeString(" Currently, I am studying computer engineering at The Faculty of Computer and Information Science in Ljubljana.")
+        .pauseFor(1000)
+        .typeString(" I've also spent a good part of my teens playing guitar and studying music.")
+        .pauseFor(1000)
+        .typeString("<br><strong>Let's work together!</strong>")
         .start().callFunction(function() {
             window.setTimeout(function() {
                 // document.getElementsByTagName('footer')[0].style.display = 'flex';
