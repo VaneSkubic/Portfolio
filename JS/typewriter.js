@@ -1,42 +1,53 @@
 var title = document.getElementsByClassName('about-title-header')[0];
 var paragraph = document.getElementsByClassName('about-paragraph')[0];
+var hand = document.getElementsByClassName('about-title-img')[0];
 var typewriter;
 
-typewriter = new Typewriter(paragraph, {
+typewriter = new Typewriter(title, {
     loop: false,
-    delay: 30,
+    delay: 150,
+    cursor: ' '
 });
 
 window.setTimeout(function() {
-    paragraph.style.opacity = '1';
-}, 1500)
+    typewriter.typeString("HELLO!").changeCursor(' ').start().callFunction(function() {
+        title
+        typewriter = new Typewriter(paragraph, {
+            loop: false,
+            delay: 30,
+        });
 
-window.setTimeout(function() {
-    typewriter
-        .typeString("I am <strong>Vane Skubic</strong>, a web developer and part-time musician based in Logatec, Slovenia.")
-        .pauseFor(1000)
-        .typeString(" My mission is to equip <strong>your brand with a strong visual identity</strong> on the web.")
-        .pauseFor(1000)
-        .typeString(" My main interests are web design/development, mobile development, and 3D.")
-        .pauseFor(1000)
-        .typeString(" Currently, I am studying computer engineering at The Faculty of Computer and Information Science in Ljubljana.")
-        .pauseFor(1000)
-        .typeString(" I've also spent a good part of my teens playing guitar and studying music.")
-        .pauseFor(1000)
-        .typeString("<br><strong>Let's work together!</strong>")
-        .start().callFunction(function() {
-            window.setTimeout(function() {
-                // document.getElementsByTagName('footer')[0].style.display = 'flex';
-                var projects = document.getElementById('projects')
-                projects.style.display = 'block';
-                projects.scrollIntoView({
-                    behavior: 'smooth'
-                });
-                window.setTimeout(function() {
-                    var socials = document.getElementsByClassName('socials')[0]
-                    socials.style.display = 'flex';
-                }, 400)
-            }, 1000)
+        hand.style.opacity = '1'
+        paragraph.style.opacity = '1';
 
-        })
-}, 3000)
+        window.setTimeout(function() {
+            typewriter
+                .typeString("I am <strong>Vane Skubic</strong>, a web developer and part-time musician based in Logatec, Slovenia.")
+                .pauseFor(1000)
+                .typeString(" My mission is to equip <strong>your brand with a strong visual identity</strong> on the web.")
+                .pauseFor(1000)
+                .typeString(" My main interests are web design/development, mobile development, and 3D.")
+                .pauseFor(1000)
+                .typeString(" Currently, I am studying computer engineering at The Faculty of Computer and Information Science in Ljubljana.")
+                .pauseFor(1000)
+                .typeString(" I've also spent a good part of my teens playing guitar and studying music.")
+                .pauseFor(1000)
+                .typeString("<br><strong>Let's work together!</strong>")
+                .start().callFunction(function() {
+                    window.setTimeout(function() {
+                        // document.getElementsByTagName('footer')[0].style.display = 'flex';
+                        var projects = document.getElementById('projects')
+                        projects.style.display = 'block';
+                        projects.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        window.setTimeout(function() {
+                            var socials = document.getElementsByClassName('socials')[0]
+                            socials.style.display = 'flex';
+                        }, 400)
+                        delete typewriter
+                    }, 1000)
+                })
+        }, 1500)
+    })
+}, 800)
