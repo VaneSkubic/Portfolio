@@ -273,11 +273,6 @@ h2 {
 }
 
 #about {
-    /* background: rgb(248, 243, 242);
-    background: -moz-radial-gradient(circle, rgba(248, 243, 242, 1) 0%, rgba(223, 216, 215, 1) 69%, rgba(187, 176, 175, 1) 100%);
-    background: -webkit-radial-gradient(circle, rgba(248, 243, 242, 1) 0%, rgba(223, 216, 215, 1) 69%, rgba(187, 176, 175, 1) 100%);
-    background: radial-gradient(circle, rgba(248, 243, 242, 1) 0%, rgba(223, 216, 215, 1) 69%, rgba(187, 176, 175, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#f8f3f2", endColorstr="#bbb0af", GradientType=1); */
     background-color: #F8F3F2;
     height: 100vh;
 }
@@ -297,6 +292,18 @@ h2 {
     display: flex;
     align-items: center;
     margin-bottom: 3rem;
+    animation: appear .5s;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .about-title-header {
@@ -306,6 +313,26 @@ h2 {
 
 .about-title img {
     width: calc(2rem + 2vw);
+    animation: shake .5s;
+    animation-delay: .4s;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-12deg);
+    }
+    50% {
+        transform: rotate(9deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .about-paragraph {
@@ -314,6 +341,12 @@ h2 {
     line-height: calc(0.6vw + 1rem);
     font-weight: 300;
     margin-bottom: 5rem;
+    transition: opacity 0.6s;
+    -webkit-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -moz-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -o-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    opacity: 0;
 }
 
 .about-buttons {

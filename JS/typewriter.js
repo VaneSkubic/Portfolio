@@ -1,10 +1,15 @@
 var title = document.getElementsByClassName('about-title-header')[0];
 var paragraph = document.getElementsByClassName('about-paragraph')[0];
+var typewriter;
 
-var typewriter = new Typewriter(paragraph, {
+typewriter = new Typewriter(paragraph, {
     loop: false,
     delay: 30,
 });
+
+window.setTimeout(function() {
+    paragraph.style.opacity = '1';
+}, 1500)
 
 window.setTimeout(function() {
     typewriter
@@ -34,4 +39,4 @@ window.setTimeout(function() {
             }, 1000)
 
         })
-}, 1000)
+}, 3000)
