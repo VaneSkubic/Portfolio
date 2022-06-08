@@ -76,8 +76,8 @@ window.setTimeout(function() {
 }, 800)
 
 function finishAnimation() {
+    cancel.style.opacity = '0'
     window.setTimeout(function() {
-        cancel.style.opacity = '0'
         var projects = document.getElementById('projects')
         projects.style.display = 'block';
         projects.scrollIntoView({
