@@ -2,6 +2,7 @@ var title = document.getElementsByClassName('about-title-header')[0];
 var paragraph = document.getElementsByClassName('about-paragraph')[0];
 var hand = document.getElementsByClassName('about-title-img')[0];
 var cancel = document.getElementsByClassName('cancel')[0]
+var canceled = false
 
 var typewriter;
 var pause = 1000;
@@ -42,10 +43,13 @@ window.setTimeout(function() {
             })
 
             document.addEventListener('touchend', function(e) {
-                typewriter.stop()
-                var spanElement = paragraph.getElementsByTagName('span')[0]
-                spanElement.innerHTML = string
-                finishAnimation()
+                if (!canceled) {
+                    canceled = true
+                    typewriter.stop()
+                    var spanElement = paragraph.getElementsByTagName('span')[0]
+                    spanElement.innerHTML = string
+                    finishAnimation()
+                }
             })
 
             typewriter
@@ -77,6 +81,7 @@ window.setTimeout(function() {
 
 function finishAnimation() {
     cancel.style.opacity = '0'
+    cancel.style.transform = 'translate(-50%, 20px)'
     window.setTimeout(function() {
         var projects = document.getElementById('projects')
         projects.style.display = 'block';
