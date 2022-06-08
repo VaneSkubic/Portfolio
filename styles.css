@@ -178,6 +178,7 @@ a {
 }
 
 .cancel {
+    font-size: calc(0.3vw + 0.7rem);
     text-align: center;
     position: fixed;
     left: 50%;
@@ -356,7 +357,7 @@ h2 {
 }
 
 .about-paragraph {
-    font-size: calc(0.6vw + 0.7rem);
+    font-size: calc(0.4vw + 0.9rem);
     letter-spacing: 0.15rem;
     line-height: calc(0.6vw + 1rem);
     font-weight: 300;
