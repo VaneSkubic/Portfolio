@@ -143,6 +143,7 @@ table {
 html {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 ::-webkit-scrollbar {
