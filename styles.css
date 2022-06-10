@@ -292,6 +292,8 @@ h2 {
 
 #about {
     background-color: #F8F3F2;
+    background-image: url(Assets/grain.png);
+    background-size: cover;
     height: 100vh;
 }
 
