@@ -439,6 +439,8 @@ h2 {
     background-color: #F8F3F2;
     background-image: url(Assets/grain.webp);
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     height: 100vh;
 }
 
