@@ -377,7 +377,7 @@ h1 {
     display: none;
     background-color: #1D1B1A;
     color: white;
-    padding: 50px;
+    padding: 50px 50px 10px 50px;
 }
 
 .project {
