@@ -526,7 +526,14 @@ h2 {
 
 .socials {
     margin: 0 calc(2vw + 0.5rem);
-    display: none;
+    display: flex;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -moz-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -o-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
 }
 
 .socials a {

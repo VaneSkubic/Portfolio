@@ -85,12 +85,14 @@ function finishAnimation() {
     window.setTimeout(function() {
         var projects = document.getElementById('projects')
         projects.style.display = 'block';
-        projects.scrollIntoView({
-            behavior: 'smooth'
-        });
+        // projects.scrollIntoView({
+        //     behavior: 'smooth'
+        // });
         window.setTimeout(function() {
             var socials = document.getElementsByClassName('socials')[0]
             socials.style.display = 'flex';
+            socials.style.transform = 'translateY(0)'
+            socials.style.opacity = '1'
         }, 400)
         delete typewriter
     }, 1000)
