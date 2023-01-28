@@ -9,7 +9,7 @@ var pause = 1000;
 var string = `I am <strong>Vane Skubic</strong>, 
     a web developer and part-time musician based in Logatec, Slovenia. 
     My mission is to equip <strong>your brand with a strong visual identity</strong> 
-    on the web. My main interests are web design/development, mobile development, and 3D. 
+    on the web. My main interests are web development/design, mobile development, and 3D. 
     Currently, I am studying computer engineering at The Faculty of Computer and Information Science in Ljubljana. 
     I've also spent a good part of my teens playing guitar and studying music.
     <br><strong>Let's work together!</strong>`
