@@ -530,6 +530,7 @@ h2 {
     display: flex;
     transform: translateY(-10px);
     opacity: 0;
+    visibility: hidden;
     transition: all 0.2s;
     -webkit-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
     -moz-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
@@ -553,6 +554,41 @@ h2 {
 .socials a:hover {
     position: relative;
     transform: translateY(-5px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -moz-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -o-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+}
+
+.scroll-indicator svg {
+    height: 45px;
+    width: 45px;
+}
+
+.scroll-indicator a {
+    transition: all 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -moz-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    -o-transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+    transition-timing-function: cubic-bezier(.17, .67, 0, .97) reverse;
+}
+
+.scroll-indicator a:hover {
+    transform: translateY(5px);
 }
 
 footer {
@@ -585,6 +621,7 @@ footer a {
 #topButton:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.6);
+    cursor: pointer;
 }
 
 #topButton svg {

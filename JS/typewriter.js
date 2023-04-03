@@ -90,9 +90,14 @@ function finishAnimation() {
         // });
         window.setTimeout(function() {
             var socials = document.getElementsByClassName('socials')[0]
+            var scrollIndicator = document.getElementsByClassName('scroll-indicator')[0]
             socials.style.display = 'flex';
             socials.style.transform = 'translateY(0)'
             socials.style.opacity = '1'
+            socials.style.visibility = 'visible'
+            scrollIndicator.style.transform = 'translateY(0) translateX(-50%) rotate(180deg)'
+            scrollIndicator.style.opacity = '1'
+            scrollIndicator.style.visibility = 'visible'
         }, 400)
         delete typewriter
     }, 1000)
