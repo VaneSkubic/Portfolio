@@ -661,3 +661,9 @@ footer a {
         align-self: center;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+}
