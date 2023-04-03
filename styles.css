@@ -440,8 +440,19 @@ h2 {
     background-image: url(Assets/grain.webp);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+    #about {
+        background-attachment: scroll;
+    }
+}
+
+@supports not (-webkit-touch-callout: none) {
+    #about {
+        background-attachment: fixed;
+    }
 }
 
 .about-container {
