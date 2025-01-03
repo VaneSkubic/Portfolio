@@ -9,7 +9,7 @@ var pause = 1000;
 var string = `I am <strong>Vane Skubic</strong>, 
     a web developer and part-time musician based in Logatec, Slovenia. 
     My mission is to equip <strong>your brand with a strong visual identity</strong> 
-    on the web. My main interests are web development/design, mobile development, and 3D. 
+    on the web. My main interests are web development/design, AI and UX design. 
     Currently, I am studying computer engineering at The Faculty of Computer and Information Science in Ljubljana. 
     I've also spent a good part of my teens playing guitar and studying music.
     <br><strong>Let's work together!</strong>`
@@ -19,8 +19,8 @@ typewriter = new Typewriter(title, {
     cursor: ' '
 });
 
-window.setTimeout(function() {
-    typewriter.typeString("HELLO!").changeCursor(' ').start().callFunction(function() {
+window.setTimeout(function () {
+    typewriter.typeString("HELLO!").changeCursor(' ').start().callFunction(function () {
 
         typewriter = new Typewriter(paragraph, {
             loop: false,
@@ -30,10 +30,10 @@ window.setTimeout(function() {
         hand.style.opacity = '1'
         paragraph.style.opacity = '1';
 
-        window.setTimeout(function(
+        window.setTimeout(function (
 
         ) {
-            document.addEventListener('keypress', function(e) {
+            document.addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
                     typewriter.stop()
                     var spanElement = paragraph.getElementsByTagName('span')[0]
@@ -42,7 +42,7 @@ window.setTimeout(function() {
                 finishAnimation()
             })
 
-            document.addEventListener('touchend', function(e) {
+            document.addEventListener('touchend', function (e) {
                 if (!canceled) {
                     canceled = true
                     typewriter.stop()
@@ -82,13 +82,13 @@ window.setTimeout(function() {
 function finishAnimation() {
     cancel.style.opacity = '0'
     cancel.style.transform = 'translate(-50%, 20px)'
-    window.setTimeout(function() {
+    window.setTimeout(function () {
         var projects = document.getElementById('projects')
         projects.style.display = 'block';
         // projects.scrollIntoView({
         //     behavior: 'smooth'
         // });
-        window.setTimeout(function() {
+        window.setTimeout(function () {
             var socials = document.getElementsByClassName('socials')[0]
             var scrollIndicator = document.getElementsByClassName('scroll-indicator')[0]
             socials.style.display = 'flex';
